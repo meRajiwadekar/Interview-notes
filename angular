@@ -1,0 +1,31 @@
+Angular topics:
+ 	Data binding
+ 	Components
+ 	Authentication
+ 	Routing
+ 	HttpClient
+ 	Service and DI
+ 	Forms
+ 	Component communication
+ 	Pipes
+ 	Directives
+ 	
+ Data binding
+data binding means interacting with data from component class to our view/template(html)
+dynamically getting/passing data from view/template(html) to component class/controller.
+e.g.,
+using ngModel:
+<input type="text" ngModel>
+
+one way data binding:
+<input type="text" [ngModel]="firstName">
+
+two way data binding:
+<input type="text" [(ngModel)]="firstName">
+
+
+<input type="text" #name=""ngModel name="userName" ngModel="name"/>
+<div *ngIf="name.errors && (name.invalid || name.untouched)">
+	<small *ngIf="name.errors.required">Name is required</small>
+	<small *ngIf="name.errors.pattern">Invalid username</small>
+</div>
